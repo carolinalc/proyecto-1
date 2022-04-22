@@ -3,11 +3,11 @@
 class Game {
     constructor(){
         this.bolita = new Bolita()
-        this.amarilloArr= [new Amarilla(0)]
-        this.blancaArr= [new Blanca(0)]
-        this.rosaArr= [new Rosa(0)]
-        this.rojaArr= [new Roja(0)]
-        this.verdeArr= [new Verde(0)]
+        this.amarilloArr= new Amarilla()
+        this.blancaArr= new Blanca()
+        this.rosaArr= new Rosa()
+        this.rojaArr= new Roja()
+        this.verdeArr= new Verde()
         this.isGameOn = true;
     }
 
@@ -20,15 +20,22 @@ gameLoop = () => {
 
     //dibujar los elementos
     this.bolita.drawBolita()
-    this.amarilloArr.drawComida()
-    this.blancaArr.drawComida()
-    this.rosaArr.drawComida()
-    this.rojaArr.drawComida()
-    this.verdeArr.drawComida()
+    this.amarilloArr.drawAmarilla()
+    this.blancaArr.drawBlanca()
+    this.rosaArr.drawRosa()
+    this.rojaArr.drawRoja()
+    this.verdeArr.drawVerde()
 
 
     //movimientos de los elementos
+    //this.bolita.gravityBolita()
+    this.amarilloArr.moveAmarilla()
+    this.rojaArr.moveRoja()
+    this.blancaArr.moveBlanca()
+    this.rosaArr.moveRosa()
+    this.verdeArr.moveVerde()
 
+    
 
 
     //play and repeat
