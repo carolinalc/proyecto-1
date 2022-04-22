@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body background="../Imagenes/chihiro043.jpg">
+
+    <div class="container">
+        <!-- START SCREEN -->
+        <div id="splash-screen" class="container">
+          <img src="../Imagenes/chihiro031.jpg" width="800" alt="logo">
+          <button id="start-btn">LET'S EAT</button>
+        </div>
+        
+        <!-- CANVAS DEL JUEGO -->
+        <canvas id="my-canvas" width="1200" height="600"></canvas>
+        
+        <!-- EMPACHO -->
+        <div id="gameover-screen" class="container">
+          <img src="../Imagenes/chihiro006.jpg" width="800" alt="logo">
+          <button id="restart-btn">EAT AGAIN 🐷</button>
+        </div>
+    
+      </div>
+
+    <script src="main.js"></script>
+    <script src="game.js"></script>
+    <script src="comida.js"></script>
+    <script src="bolita.js"></script>
+</body>
+</html>
