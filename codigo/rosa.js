@@ -7,7 +7,7 @@ class Rosa {
         this.h = 60; //height - alto
         this.img = new Image()
         this.img.src = srcElem
-        this.speed = 1;
+        this.speed = 3;
 
     }
 

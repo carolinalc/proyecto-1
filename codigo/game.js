@@ -106,7 +106,6 @@ gameLoop = () => {
     
 
     this.bolita.gravityBolita()
-
     
 
 
@@ -114,9 +113,32 @@ gameLoop = () => {
     if (this.isGameOn){
         requestAnimationFrame(this.gameLoop)
         }
+
+    //finiquito
+    this.gameOverRoja()
 }
 
+
+
+gameOverRoja = () => {
+
+this.rojaArr.forEach((eachRoja) => {
+if(this.bolita.x < eachRoja.x + eachRoja.w &&
+    this.bolita.x + this.bolita.w > eachRoja.x &&
+    this.bolita.y < eachRoja.y + eachRoja.h &&
+    this.bolita.h + this.bolita.y > eachRoja.y)  {
+
+        this.isGameOn = false;
+        canvas.style.display = "none"
+        gameOverScreen.style.display = "flex"    }
+})
+
+
 }
+
+
+
+}//fin clase
 
 
 let cambioPosicion;

@@ -9,7 +9,7 @@ class Roja {
         this.h = 80; //height - alto
         this.img = new Image()
         this.img.src = srcElem
-        this.speed = 1;
+        this.speed = 4;
 
     }
         
