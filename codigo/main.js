@@ -22,7 +22,7 @@ const startGame = () => {
   //empezar nuestra logica de juego
   //nuestro juego sera todo una nueva clase
   //vamos a crear un nuevo objeto de lo que será la clase Game
-   game = new Game()
+    game = new Game()
     game.gameLoop()
 }
 

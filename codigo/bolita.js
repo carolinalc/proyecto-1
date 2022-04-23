@@ -6,13 +6,11 @@ class Bolita {
 
         this.x = 110; // posicion desde eje x
         this.y = 50;// posicion desde eje y
-        this.w = 50; //width - ancho
-        this.h = 40; //height - alto
+        this.w = 70; //width - ancho
+        this.h = 80; //height - alto
         this.img = new Image()
         this.img.src = "../Imagenes/bolita.jpg"
         this.speed =1;
-        //this.gravity = 0.05;
-        //this.gravitySpeed = 0;
         this.jumpSpeed = 30;
 
     }
@@ -22,11 +20,20 @@ class Bolita {
     }
 
         //gravedad bolita
-    /*gravityBolita () {
-        this.gravitySpeed += this.gravity;
-        this.x += this.speedX;
-        this.y += this.speedY + this.gravitySpeed;
-      }*/
+    gravityBolita = () => {
+        this.y = this.y + this.speed;
+        this.hitBottom();
+      }             
+
+
+        //que pare abajo del canvas
+    hitBottom = () => {
+        if (this.y > canvas.height - 50) {
+            this.y = canvas.height - 50;
+            
+        }
+    }
+
 
         //salto bolita
       jumpBolita = () =>{

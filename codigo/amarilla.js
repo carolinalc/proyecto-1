@@ -1,12 +1,12 @@
 class Amarilla {  
 
-    constructor(){
+    constructor(ejeY, srcElem){
         this.x = canvas.width; // posicion desde eje x
-        this.y = 120;// posicion desde eje y
-        this.w = 50; //width - ancho
-        this.h = 200; //height - alto
+        this.y = ejeY;// posicion desde eje y
+        this.w = 60  ; //width - ancho
+        this.h = 60  ; //height - alto
         this.img = new Image()
-        this.img.src = "../Imagenes/amarilla.png"
+        this.img.src = srcElem
         this.speed = 1;
 
     }
