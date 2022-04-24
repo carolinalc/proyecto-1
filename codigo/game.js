@@ -9,40 +9,44 @@ class Game {
         this.rosaArr= [new Rosa(0, "../Imagenes/rosa.png")]
         this.verdeArr= [new Verde(0, "../Imagenes/verde.png")]
         this.isGameOn = true;
+        this.cambioPosicion;
+        this.newComida = 0;
     }
+
+    //
 
         
     // añadir mas estrellas
    addRoja = () => { 
     if(this.rojaArr[this.rojaArr.length - 1].x < 1000){
-        cambioPosicion = Math.random() *  580; 
-        newComida= new Roja(cambioPosicion, "../Imagenes/roja.png")
-        this.rojaArr.push(newComida)}}
+        this.cambioPosicion = Math.random() *  580; 
+        this.newComida= new Roja(this.cambioPosicion, "../Imagenes/roja.png")
+        this.rojaArr.push(this.newComida)}}
 
     addAmarilla = () => { 
     if(this.amarillaArr[this.amarillaArr.length - 1].x < 1000){
-        cambioPosicion = Math.random() *  580;
-        newComida = new Amarilla(cambioPosicion, "../Imagenes/amarilla.png")
-        this.amarillaArr.push(newComida)}}
+        this.cambioPosicion = Math.random() *  580;
+        this.newComida = new Amarilla(this.cambioPosicion, "../Imagenes/amarilla.png")
+        this.amarillaArr.push(this.newComida)}}
         
     
     addBlanca = () => { 
     if(this.blancaArr[this.blancaArr.length - 1].x < 1000){
-        cambioPosicion = Math.random() *  580;
-        newComida = new Blanca(cambioPosicion, "../Imagenes/blanca.png")
-        this.blancaArr.push(newComida)}}
+        this.cambioPosicion = Math.random() *  580;
+        this.newComida = new Blanca(this.cambioPosicion, "../Imagenes/blanca.png")
+        this.blancaArr.push(this.newComida)}}
         
     addRosa = () => { 
     if(this.rosaArr[this.rosaArr.length - 1].x < 1000){
-        cambioPosicion = Math.random() *  580;
-        newComida = new Rosa(cambioPosicion, "../Imagenes/rosa.png")
-        this.rosaArr.push(newComida)}}
+        this.cambioPosicion = Math.random() *  580;
+        this.newComida = new Rosa(this.cambioPosicion, "../Imagenes/rosa.png")
+        this.rosaArr.push(this.newComida)}}
         
     addVerde = () => { 
     if(this.verdeArr[this.verdeArr.length - 1].x < 1000){
-        cambioPosicion = Math.random() *  580;
-        newComida = new Verde(cambioPosicion, "../Imagenes/verde.png")
-        this.verdeArr.push(newComida)}}
+        this.cambioPosicion = Math.random() *  580;
+        this.newComida = new Verde(this.cambioPosicion, "../Imagenes/verde.png")
+        this.verdeArr.push(this.newComida)}}
 
 
 
@@ -141,5 +145,5 @@ if(this.bolita.x < eachRoja.x + eachRoja.w &&
 }//fin clase
 
 
-let cambioPosicion;
-let newComida= 0;
+//let cambioPosicion;
+//let newComida= 0;
