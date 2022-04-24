@@ -20,4 +20,6 @@ class Amarilla {
         this.x = this.x - this.speed;
     }
 
+    
+    
 }

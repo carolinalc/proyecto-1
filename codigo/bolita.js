@@ -11,7 +11,7 @@ class Bolita {
         this.img = new Image()
         this.img.src = "../Imagenes/bolita.png"
         this.speed =1;
-        this.jumpSpeed = 30;
+        this.jumpSpeed = 50;
 
     }
         //dibujar bolita
@@ -29,8 +29,8 @@ class Bolita {
     hitBottom = () => {                    
         if (this.y > canvas.height - 50) {
             this.y = canvas.height - 50;
-            
         }
+
     }
 
     
@@ -40,7 +40,8 @@ class Bolita {
         this.y = this.y - this.jumpSpeed;
     }
 
-        //mueve derecha
+
+       //mueve derecha
         moveRight = () => {
             this.x = this.x + 13;
         }
@@ -50,4 +51,17 @@ class Bolita {
         moveLeft = () => {
             this.x = this.x - 13;
         }
+
+        //mueve arriba
+        moveUp = () => {
+            this.y = this.y - 13;
+        }
+
+
+        //mueve abajo
+        moveDown = () => {
+            this.y = this.y + 13;
+        }
+
+
 }//final clase

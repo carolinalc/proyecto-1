@@ -11,9 +11,8 @@ class Game {
         this.isGameOn = true;
         this.cambioPosicion;
         this.newComida = 0;
+        this.delete;
     }
-
-    //
 
         
     // añadir mas estrellas
@@ -43,7 +42,7 @@ class Game {
         this.rosaArr.push(this.newComida)}}
         
     addVerde = () => { 
-    if(this.verdeArr[this.verdeArr.length - 1].x < 1000){
+    if(this.verdeArr[this.verdeArr.length - 1].x < 700){
         this.cambioPosicion = Math.random() *  580;
         this.newComida = new Verde(this.cambioPosicion, "../Imagenes/verde.png")
         this.verdeArr.push(this.newComida)}}
@@ -99,15 +98,15 @@ gameLoop = () => {
         each.moveBlanca()
     })
 
-     this.rosaArr.forEach((eachPipe) => {
-        eachPipe.moveRosa()
+     this.rosaArr.forEach((each) => {
+        each.moveRosa()
     })
 
-    this.verdeArr.forEach((eachPipe) => {
-        eachPipe.moveVerde()
+    this.verdeArr.forEach((each) => {
+        each.moveVerde()
     })
     
-    
+   
 
     this.bolita.gravityBolita()
     
@@ -120,10 +119,15 @@ gameLoop = () => {
 
     //finiquito
     this.gameOverRoja()
+
+    //desaparicion
+    
+      this.choqueAmarilla()
+      
 }
 
 
-
+// choque con la roja
 gameOverRoja = () => {
 
 this.rojaArr.forEach((eachRoja) => {
@@ -136,14 +140,30 @@ if(this.bolita.x < eachRoja.x + eachRoja.w &&
         canvas.style.display = "none"
         gameOverScreen.style.display = "flex"    }
 })
-
-
 }
 
 
 
+
+//CHOQUE CON LAS ESTRELLAS
+//amarilla
+choqueAmarilla = () => {
+
+    this.amarillaArr.forEach((eachAmarilla) => {
+    if (this.bolita.x < eachAmarilla.x + eachAmarilla.w &&
+      this.bolita.x + this.bolita.w > eachAmarilla.x &&
+      this.bolita.y < eachAmarilla.y + eachAmarilla.h &&
+      this.bolita.h + this.bolita.y > eachAmarilla.y
+    ) {
+      //eliminar eachAmarilla
+      this.isGameOn = true;
+      canvas.style.display = "block"
+      
+    this.delete = this.amarillaArr.indexOf(this.amarillaArr[this.amarillaArr.length])
+    this.amarillaArr.splice(this.delete, 1)}
+})
+}
+
 }//fin clase
 
 
-//let cambioPosicion;
-//let newComida= 0;

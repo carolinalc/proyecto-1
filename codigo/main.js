@@ -6,7 +6,7 @@ const startScreen = document.querySelector("#splash-screen")
 const gameOverScreen = document.querySelector("#gameover-screen")
 const canvas = document.querySelector("#my-canvas")
 const ctx = canvas.getContext("2d")
-const napBtn = document.querySelector("#nap-btn")
+
 
 
 
@@ -16,10 +16,10 @@ const startGame = () => {
   startScreen.style.display = "none";
 
 
+
     game = new Game()
     game.gameLoop()
 }
-
 
 
 let spacePress = (event) => {
@@ -40,11 +40,26 @@ let leftPress = (event) => {
     }
 }
 
+let upPress = (event) => {
+    if(event.code === "ArrowUp"){
+        game.bolita.moveUp()
+    }
+}
 
+let downPress = (event) => {
+    if(event.code === "ArrowDown"){
+        game.bolita.moveDown()
+    }
+}
+
+//como hago para que el boton me lleve al dic final
 
 // * addEventListener
 startBtn.addEventListener("click", startGame)
 restartBtn.addEventListener("click", startGame)
+
 window.addEventListener("keydown", spacePress)
 window.addEventListener("keydown", leftPress)
 window.addEventListener("keydown", rightPress)
+window.addEventListener("keydown", upPress)
+window.addEventListener("keydown", downPress)
