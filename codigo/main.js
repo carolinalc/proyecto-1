@@ -6,6 +6,8 @@ const startScreen = document.querySelector("#splash-screen")
 const gameOverScreen = document.querySelector("#gameover-screen")
 const canvas = document.querySelector("#my-canvas")
 const ctx = canvas.getContext("2d")
+const contador = document.querySelector("#contador-puntos")
+
 
 
 
@@ -14,6 +16,7 @@ const startGame = () => {
   gameOverScreen.style.display = "none";
   canvas.style.display ="block";
   startScreen.style.display = "none";
+  contador.style.display = "block"
 
 
 
@@ -52,7 +55,7 @@ let downPress = (event) => {
     }
 }
 
-//como hago para que el boton me lleve al dic final
+
 
 // * addEventListener
 startBtn.addEventListener("click", startGame)

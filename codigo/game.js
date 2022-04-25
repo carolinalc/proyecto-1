@@ -12,6 +12,8 @@ class Game {
         this.cambioPosicion;
         this.newComida = 0;
         this.delete;
+        this.score = [0];
+
     }
 
         
@@ -23,7 +25,7 @@ class Game {
         this.rojaArr.push(this.newComida)}}
 
     addAmarilla = () => { 
-    if(this.amarillaArr[this.amarillaArr.length - 1].x < 1000){
+    if(this.amarillaArr[this.amarillaArr.length - 1].x < 900){
         this.cambioPosicion = Math.random() *  580;
         this.newComida = new Amarilla(this.cambioPosicion, "../Imagenes/amarilla.png")
         this.amarillaArr.push(this.newComida)}}
@@ -36,7 +38,7 @@ class Game {
         this.blancaArr.push(this.newComida)}}
         
     addRosa = () => { 
-    if(this.rosaArr[this.rosaArr.length - 1].x < 1000){
+    if(this.rosaArr[this.rosaArr.length - 1].x < 800){
         this.cambioPosicion = Math.random() *  580;
         this.newComida = new Rosa(this.cambioPosicion, "../Imagenes/rosa.png")
         this.rosaArr.push(this.newComida)}}
@@ -123,8 +125,14 @@ gameLoop = () => {
     //desaparicion
     
       this.choqueAmarilla()
-      
-}
+      this.choqueBlanca()
+      this.choqueRosa()
+      this.choqueVerde()
+
+
+      //contador
+     
+    }
 
 
 // choque con la roja
@@ -159,10 +167,68 @@ choqueAmarilla = () => {
       this.isGameOn = true;
       canvas.style.display = "block"
       
-    this.delete = this.amarillaArr.indexOf(this.amarillaArr[this.amarillaArr.length])
-    this.amarillaArr.splice(this.delete, 1)}
+    this.delete = this.amarillaArr.indexOf(eachAmarilla)
+    this.amarillaArr.splice(this.delete, 1)
+    this.score++}
 })
 }
+
+choqueBlanca = () => {
+
+    this.blancaArr.forEach((eachBlanca) => {
+    if (this.bolita.x < eachBlanca.x + eachBlanca.w &&
+      this.bolita.x + this.bolita.w > eachBlanca.x &&
+      this.bolita.y < eachBlanca.y + eachBlanca.h &&
+      this.bolita.h + this.bolita.y > eachBlanca.y
+    ) {
+      //eliminar eachBlanca
+      this.isGameOn = true;
+      canvas.style.display = "block"
+      
+    this.delete = this.blancaArr.indexOf(eachBlanca)
+    this.blancaArr.splice(this.delete, 1)
+    this.score = this.score + 0
+    }
+})
+}
+
+choqueRosa = () => {
+
+    this.rosaArr.forEach((eachRosa) => {
+    if (this.bolita.x < eachRosa.x + eachRosa.w &&
+      this.bolita.x + this.bolita.w > eachRosa.x &&
+      this.bolita.y < eachRosa.y + eachRosa.h &&
+      this.bolita.h + this.bolita.y > eachRosa.y
+    ) {
+      //eliminar eachRosa
+      this.isGameOn = true;
+      canvas.style.display = "block"
+      
+    this.delete = this.rosaArr.indexOf(eachRosa)
+    this.rosaArr.splice(this.delete, 1)
+    this.score = this.score + 3}
+})
+}
+
+
+choqueVerde = () => {
+
+    this.verdeArr.forEach((eachVerde) => {
+    if (this.bolita.x < eachVerde.x + eachVerde.w &&
+      this.bolita.x + this.bolita.w > eachVerde.x &&
+      this.bolita.y < eachVerde.y + eachVerde.h &&
+      this.bolita.h + this.bolita.y > eachVerde.y
+    ) {
+      //eliminar eachVerde
+      this.isGameOn = true;
+      canvas.style.display = "block"
+      
+    this.delete = this.verdeArr.indexOf(eachVerde)
+    this.verdeArr.splice(this.delete, 1)
+    this.score = this.score + 5}
+})
+}
+
 
 }//fin clase
 

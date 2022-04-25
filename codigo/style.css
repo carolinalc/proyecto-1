@@ -16,6 +16,28 @@ body {
     border-radius: 50px; 
     box-shadow: 10px 20px 20px black;
   }
+
+  #contador-puntos {
+    position: absolute;
+    text-align: center;
+    text-decoration:5px underline ;
+    right: 150px;
+    width: 200px;
+    height: 150px;
+    border: 5px solid black;
+    border-radius: 20px;
+  }
+
+  #contador-vidas {
+    position: absolute;
+    text-align: center;
+    text-decoration:5px underline ;
+    left: 150px;
+    width: 200px;
+    height: 150px;
+    border: 5px solid black;
+    border-radius: 20px;
+  }
   
   
   .container {
@@ -24,6 +46,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 50px;
+    
   }
   
   
