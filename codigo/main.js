@@ -7,7 +7,7 @@ const gameOverScreen = document.querySelector("#gameover-screen")
 const canvas = document.querySelector("#my-canvas")
 const ctx = canvas.getContext("2d")
 const contador = document.querySelector("#contador-puntos")
-
+const backbutton = document.querySelector("#back-btn")
 
 
 
@@ -55,9 +55,13 @@ let downPress = (event) => {
     }
 }
 
-
+let backToStart = () => {
+    gameOverScreen.style.display = "none";
+    startScreen.style.display = "block";
+}
 
 // * addEventListener
+backbutton.addEventListener("click", backToStart)
 startBtn.addEventListener("click", startGame)
 restartBtn.addEventListener("click", startGame)
 
