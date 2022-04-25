@@ -38,6 +38,13 @@ body {
     border: 5px solid black;
     border-radius: 20px;
   }
+
+  #instrucciones {
+    text-align: center;
+    font-style: italic;
+    border: 5px solid black;
+    
+  }
   
   
   .container {

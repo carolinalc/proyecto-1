@@ -12,11 +12,16 @@ class Game {
         this.cambioPosicion;
         this.newComida = 0;
         this.delete;
-        this.score = [0];
+        this.score = 0;
+        this.scoreVerde = 3;
 
     }
 
-        
+  
+   
+    
+
+
     // añadir mas estrellas
    addRoja = () => { 
     if(this.rojaArr[this.rojaArr.length - 1].x < 1000){
@@ -52,7 +57,7 @@ class Game {
 
 
 gameLoop = () => {
-
+console.log(this.score)
     //quitar el canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -131,7 +136,9 @@ gameLoop = () => {
 
 
       //contador
-     
+
+      document.getElementById("laSuma").innerHTML = this.score;
+      document.getElementById("laVida").innerHTML = this.scoreVerde;
     }
 
 
@@ -143,10 +150,9 @@ if(this.bolita.x < eachRoja.x + eachRoja.w &&
     this.bolita.x + this.bolita.w > eachRoja.x &&
     this.bolita.y < eachRoja.y + eachRoja.h &&
     this.bolita.h + this.bolita.y > eachRoja.y)  {
-
         this.isGameOn = false;
         canvas.style.display = "none"
-        gameOverScreen.style.display = "flex"    }
+        gameOverScreen.style.display = "flex"}
 })
 }
 
@@ -187,7 +193,11 @@ choqueBlanca = () => {
       
     this.delete = this.blancaArr.indexOf(eachBlanca)
     this.blancaArr.splice(this.delete, 1)
-    this.score = this.score + 0
+    this.scoreVerde = this.scoreVerde -1
+    }else if(this.scoreVerde === 0){
+        this.isGameOn = false;
+        canvas.style.display = "none"
+        gameOverScreen.style.display = "flex"
     }
 })
 }
@@ -225,7 +235,8 @@ choqueVerde = () => {
       
     this.delete = this.verdeArr.indexOf(eachVerde)
     this.verdeArr.splice(this.delete, 1)
-    this.score = this.score + 5}
+    this.scoreVerde = this.scoreVerde + 1;
+    }
 })
 }
 
