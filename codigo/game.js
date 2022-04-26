@@ -14,13 +14,10 @@ class Game {
         this.delete;
         this.score = 0;
         this.scoreVerde = 3;
-
+        //this.audio = new audio ("../musica/Intro.mp3")
     }
 
-  
-   
-    
-
+    //this.audio.play()
 
     // añadir mas estrellas
    addRoja = () => { 

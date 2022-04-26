@@ -6,7 +6,7 @@ body {
     background-color: #FFF5EE;
   }
   
-  #start-btn, #restart-btn{
+  #start-btn, #restart-btn,#back-btn {
     background-color:#8B008B;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -15,23 +15,24 @@ body {
     margin-top: 40px;
     border-radius: 50px; 
     box-shadow: 10px 20px 20px black;
-   
-  }
-  #back-btn{
-    background-color:#8B008B;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 5px;
-    font-size: 20px;
-    margin-top: 40px;
-    border-radius: 50px; 
-    box-shadow: 10px 20px 20px black;
-    
   }
 
-  #estiloBtn {
+  .botonStart{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .estiloBtn {
     justify-content: space-evenly;
     align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
   }
 
   #contador-puntos {
@@ -62,19 +63,7 @@ body {
     border: 5px solid black;
     padding: 10px;
   }
-  
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
     
-  }
-  
- 
-  
   
   #my-canvas, #gameover-screen{
     display: none;}

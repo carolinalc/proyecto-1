@@ -1,63 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    
+
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUSUWATARI</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUSUWATARI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body background="../Imagenes/chihiro043.jpg">
-<div class="container" > 
-  <div id="instrucciones" width="1200" height="600"><h2>INSTRUCCIONES: muevete con las flechas por la pantalla y salta con la barra de espacio.<br>
-    ESTRELLAS: las verder suman vida, las blancas restan vida, las amarillas suman 1 punto y las rosas 3 puntos.<br>
-    Las rojas te empachan y pierdes. </h2> </div>
-</div>
+  <div class="container">
+    <div id="instrucciones" width="1200" height="600">
+      <h2>INSTRUCCIONES: muevete con las flechas por la pantalla y salta con la barra de espacio.<br>
+        ESTRELLAS: las verder suman vida, las blancas restan vida, las amarillas suman 1 punto y las rosas 3 puntos.<br>
+        Las rojas te empachan y pierdes. </h2>
+    </div>
+  </div>
 
-    <div class="container">
-        <!-- START SCREEN -->
-        <div id="splash-screen" class="container">
-          <img src="../Imagenes/chihiro031.jpg" width="800" alt="logo">
-          <button id="start-btn">LET'S EAT</button>              
-        </div>
-        
-        <!-- CANVAS DEL JUEGO -->
-        <canvas id="my-canvas" width="1200" height="600"></canvas>
-        
-        <!-- OVER -->
-        <div id="gameover-screen" class="container">
-          <img src="../Imagenes/chihiro006.jpg" width="800" alt="logo">
-          <div id="estiloBtn">
-          <button id="restart-btn">EAT AGAIN 🐷</button>
-          <button id="back-btn">Back to Start ⭐</button></div>
-        </div>
+  <div class="container">
+    <!-- START SCREEN -->
+    <div id="splash-screen" class="container">
+      <img src="../Imagenes/chihiro031.jpg" width="800" alt="logo" />
 
+      <div class="botonStart"><button id="start-btn">LET'S EAT</button></div>
 
-        <!-- CONTADOR PUNTOS ESTRELLAS-->
-        <div id="contador-puntos">
-          <h2>STARS SCORE: <br><p id="laSuma"></p>  </h2>
-        </div>
+    </div>
 
+    <!-- CANVAS DEL JUEGO -->
+    <canvas id="my-canvas" width="1200" height="600"></canvas>
 
-
-        <!--CONTADOR VIDAS VERDES-->
-        <div id="contador-vidas">
-          <h2>GREEN LIVES <br><p id="laVida"></p></h2>
-        </div>
-    
+    <!-- OVER -->
+    <div id="gameover-screen" class="container">
+      <img src="../Imagenes/chihiro006.jpg" width="800" alt="logo" />
+      <div class="estiloBtn">
+        <button id="restart-btn">EAT AGAIN 🐷</button>
+        <button id="back-btn">Back to Start ⭐</button>
       </div>
+    </div>
 
-    <script src="main.js"></script>
-    <script src="game.js"></script>
-    <script src="bolita.js"></script>
-    <script src="roja.js"></script>
-    <script src="rosa.js"></script>
-    <script src="verde.js"></script>
-    <script src="amarilla.js"></script>
-    <script src="blanca.js"></script>
- 
+
+    <!-- CONTADOR PUNTOS ESTRELLAS-->
+    <div id="contador-puntos">
+      <h2>STARS SCORE: <br>
+        <p id="laSuma"></p>
+      </h2>
+    </div>
+
+
+
+    <!--CONTADOR VIDAS VERDES-->
+    <div id="contador-vidas">
+      <h2>GREEN LIVES <br>
+        <p id="laVida"></p>
+      </h2>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+  <script src="game.js"></script>
+  <script src="bolita.js"></script>
+  <script src="roja.js"></script>
+  <script src="rosa.js"></script>
+  <script src="verde.js"></script>
+  <script src="amarilla.js"></script>
+  <script src="blanca.js"></script>
+
 </body>
+
 </html>
