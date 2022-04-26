@@ -8,14 +8,18 @@ const canvas = document.querySelector("#my-canvas")
 const ctx = canvas.getContext("2d")
 const contador = document.querySelector("#contador-puntos")
 const backbutton = document.querySelector("#back-btn")
-
-
+const audioInicio = document.querySelector("#play")
+const audio = new Audio ("../musica/juego.mp3")
+const audioEnd = new Audio ("../musica/final.mp3")
 
 const startGame = () => {
     gameOverScreen.style.display = "none";
     canvas.style.display = "block";
     startScreen.style.display = "none";
     contador.style.display = "block"
+
+    audio.play()
+    audio.loop = true;
 
     game = new Game()
     game.gameLoop()
@@ -58,9 +62,11 @@ let backToStart = () => {
     startScreen.style.display = "block";
     canvas.style.display = "none";
     contador.style.display = "block"
+    audioEnd.pause()
 }
 
 // * addEventListener
+
 backbutton.addEventListener("click", backToStart)
 startBtn.addEventListener("click", startGame)
 restartBtn.addEventListener("click", startGame)
@@ -70,3 +76,6 @@ window.addEventListener("keydown", leftPress)
 window.addEventListener("keydown", rightPress)
 window.addEventListener("keydown", upPress)
 window.addEventListener("keydown", downPress)
+
+
+

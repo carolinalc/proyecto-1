@@ -14,10 +14,10 @@ class Game {
         this.delete;
         this.score = 0;
         this.scoreVerde = 3;
-        //this.audio = new audio ("../musica/Intro.mp3")
+        
     }
 
-    //this.audio.play()
+   
 
     // añadir mas estrellas
    addRoja = () => { 
@@ -149,8 +149,13 @@ if(this.bolita.x < eachRoja.x + eachRoja.w &&
     this.bolita.h + this.bolita.y > eachRoja.y)  {
         this.isGameOn = false;
         canvas.style.display = "none"
-        gameOverScreen.style.display = "flex"}
+        gameOverScreen.style.display = "flex"
+        audio.pause()
+        audioEnd.play()
+        audioEnd.loop = true;}
+        
 })
+
 }
 
 
