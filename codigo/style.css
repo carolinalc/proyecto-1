@@ -1,5 +1,5 @@
 body {
-    margin: 0%;
+    margin: 0%;;
 }
   
   #my-canvas {
@@ -32,7 +32,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: 30px;
   }
 
   #contador-puntos {
@@ -59,13 +59,31 @@ body {
 
   #instrucciones {
     text-align: center;
-    font-style: italic;
     border: 5px solid black;
-    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #name{
+    margin-top: 40px;
+    margin-bottom: 0%;
+    background-color: lightslategray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    border-radius: 20px;
+  }
+
+  #titulo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    text-decoration: 5px underline;
   }
     
   
   #my-canvas, #gameover-screen{
-    display: none;}
+    display: none;
+  border-radius: 20px;}
 
    

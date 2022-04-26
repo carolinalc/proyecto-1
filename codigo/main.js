@@ -11,6 +11,7 @@ const backbutton = document.querySelector("#back-btn")
 const audioInicio = document.querySelector("#play")
 const audio = new Audio ("../musica/juego.mp3")
 const audioEnd = new Audio ("../musica/final.mp3")
+const instrucciones = document.querySelector("#instrucciones")
 
 const startGame = () => {
     gameOverScreen.style.display = "none";
