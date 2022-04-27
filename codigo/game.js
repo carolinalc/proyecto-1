@@ -3,18 +3,17 @@
 class Game {
     constructor(){
         this.bolita = new Bolita()
-        this.rojaArr= [new Roja(0,  "../Imagenes/roja.png")]
-        this.amarillaArr= [new Amarilla(0, "../Imagenes/amarilla.png")]
-        this.blancaArr= [new Blanca(0, "../Imagenes/blanca.png")]
-        this.rosaArr= [new Rosa(0, "../Imagenes/rosa.png")]
-        this.verdeArr= [new Verde(0, "../Imagenes/verde.png")]
+        this.rojaArr= [new Roja(0,  "./Imagenes/roja.png")]
+        this.amarillaArr= [new Amarilla(0, "./Imagenes/amarilla.png")]
+        this.blancaArr= [new Blanca(0, "./Imagenes/blanca.png")]
+        this.rosaArr= [new Rosa(0, "./Imagenes/rosa.png")]
+        this.verdeArr= [new Verde(0, "./Imagenes/verde.png")]
         this.isGameOn = true;
         this.cambioPosicion;
         this.newComida = 0;
         this.delete;
         this.score = 0;
         this.scoreVerde = 3;
-        
     }
 
    
@@ -23,38 +22,39 @@ class Game {
    addRoja = () => { 
     if(this.rojaArr[this.rojaArr.length - 1].x < 1000){
         this.cambioPosicion = Math.random() *  580; 
-        this.newComida= new Roja(this.cambioPosicion, "../Imagenes/roja.png")
+        this.newComida= new Roja(this.cambioPosicion, "./Imagenes/roja.png")
         this.rojaArr.push(this.newComida)}}
 
     addAmarilla = () => { 
     if(this.amarillaArr[this.amarillaArr.length - 1].x < 900){
         this.cambioPosicion = Math.random() *  580;
-        this.newComida = new Amarilla(this.cambioPosicion, "../Imagenes/amarilla.png")
+        this.newComida = new Amarilla(this.cambioPosicion, "./Imagenes/amarilla.png")
         this.amarillaArr.push(this.newComida)}}
         
     
     addBlanca = () => { 
     if(this.blancaArr[this.blancaArr.length - 1].x < 1000){
         this.cambioPosicion = Math.random() *  580;
-        this.newComida = new Blanca(this.cambioPosicion, "../Imagenes/blanca.png")
+        this.newComida = new Blanca(this.cambioPosicion, "./Imagenes/blanca.png")
         this.blancaArr.push(this.newComida)}}
         
     addRosa = () => { 
     if(this.rosaArr[this.rosaArr.length - 1].x < 800){
         this.cambioPosicion = Math.random() *  580;
-        this.newComida = new Rosa(this.cambioPosicion, "../Imagenes/rosa.png")
+        this.newComida = new Rosa(this.cambioPosicion, "./Imagenes/rosa.png")
         this.rosaArr.push(this.newComida)}}
         
     addVerde = () => { 
     if(this.verdeArr[this.verdeArr.length - 1].x < 700){
         this.cambioPosicion = Math.random() *  580;
-        this.newComida = new Verde(this.cambioPosicion, "../Imagenes/verde.png")
+        this.newComida = new Verde(this.cambioPosicion, "./Imagenes/verde.png")
         this.verdeArr.push(this.newComida)}}
 
 
 
 gameLoop = () => {
 console.log(this.score)
+
     //quitar el canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -153,9 +153,9 @@ if(this.bolita.x < eachRoja.x + eachRoja.w &&
         audio.pause()
         audioEnd.play()
         audioEnd.loop = true;}
-        
+        marcador.style.display ="none"
+        document.getElementById("scorefinal").innerText = this.score;
 })
-
 }
 
 

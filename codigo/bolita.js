@@ -9,7 +9,7 @@ class Bolita {
         this.w = 50; //wi    dth - ancho
         this.h = 50; //height - alto
         this.img = new Image()
-        this.img.src = "../Imagenes/bolita.png"
+        this.img.src = "./Imagenes/bolita.png"
         this.speed =1;
         this.jumpSpeed = 50;
 

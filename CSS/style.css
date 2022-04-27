@@ -68,11 +68,11 @@ body {
 
   #name{
     margin-top: 40px;
-    margin-bottom: 0%;
     background-color: lightslategray;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
     border-radius: 20px;
+    
   }
 
   #titulo {
@@ -80,7 +80,11 @@ body {
     font-size: 30px;
     text-decoration: 5px underline;
   }
-    
+  
+  #nameover {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 30px;
+  }
   
   #my-canvas, #gameover-screen{
     display: none;

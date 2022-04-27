@@ -9,9 +9,13 @@ const ctx = canvas.getContext("2d")
 const contador = document.querySelector("#contador-puntos")
 const backbutton = document.querySelector("#back-btn")
 const audioInicio = document.querySelector("#play")
-const audio = new Audio ("../musica/juego.mp3")
-const audioEnd = new Audio ("../musica/final.mp3")
+const audio = new Audio ("./musica/juego.mp3")
+const audioEnd = new Audio ("./musica/final.mp3")
 const instrucciones = document.querySelector("#instrucciones")
+const nameScore = document.querySelector("#name")
+const nameOver = document.querySelector("#nombrepersona")
+const marcador = document.querySelector("#marcador")
+
 
 const startGame = () => {
     gameOverScreen.style.display = "none";
@@ -21,6 +25,9 @@ const startGame = () => {
 
     audio.play()
     audio.loop = true;
+
+    nameOver.innerText = nameScore.value;
+    console.log((nameScore).value)
 
     game = new Game()
     game.gameLoop()
@@ -63,6 +70,7 @@ let backToStart = () => {
     startScreen.style.display = "block";
     canvas.style.display = "none";
     contador.style.display = "block"
+    marcador.style.display ="block"
     audioEnd.pause()
 }
 

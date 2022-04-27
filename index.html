@@ -7,23 +7,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUSUWATARI</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
-<body background="../Imagenes/chihiro043.jpg">
+<body background="./Imagenes/chihiro043.jpg">
   <div class="container">
     <div id="instrucciones" width="1200" height="600">
       <h4> <span id="titulo">SUSUWATARI</span> <br><br>INSTRUCCIONES: muevete con las flechas por la pantalla y salta con la barra de espacio.<br>
         ESTRELLAS: las verder suman vida, las blancas restan vida, las amarillas suman 1 punto y las rosas 3 puntos.<br>
         Las rojas te empachan y pierdes. </h4>
     </div>
-    <div id="marcador">  <input type="string" id="name"> </div>
+    <div id="marcador">  <input type="string" id="name" placeholder="   YOUR NAME HERE"> </div>
   </div>
 
   <div class="container">
     <!-- START SCREEN -->
     <div id="splash-screen" class="container">
-      <img src="../Imagenes/chihiro031.jpg" width="800" alt="logo" />
+      <img src="./Imagenes/chihiro031.jpg" width="800" alt="logo" />
 
       <div class="botonStart"><button id="start-btn">LET'S EAT</button></div>
 
@@ -34,7 +34,8 @@
 
     <!-- OVER -->
     <div id="gameover-screen" class="container">
-      <img src="../Imagenes/chihiro006.jpg" width="800" alt="logo" />
+      <div id="nameover"><h2><span id="nombrepersona"></span>  <span id="scorefinal"> </span></h2></div> 
+      <img src="./Imagenes/chihiro006.jpg" width="800" alt="logo" />
       <div class="estiloBtn">
         <button id="restart-btn">EAT AGAIN 🐷</button>
         <button id="back-btn">Back to Start ⭐</button>
@@ -60,14 +61,14 @@
 
   </div>
 
-  <script src="main.js"></script>
-  <script src="game.js"></script>
-  <script src="bolita.js"></script>
-  <script src="roja.js"></script>
-  <script src="rosa.js"></script>
-  <script src="verde.js"></script>
-  <script src="amarilla.js"></script>
-  <script src="blanca.js"></script>
+  <script src="./CODIGO/main.js"></script>
+  <script src="./CODIGO/game.js"></script>
+  <script src="./CODIGO/bolita.js"></script>
+  <script src="./CODIGO/roja.js"></script>
+  <script src="./CODIGO/rosa.js"></script>
+  <script src="./CODIGO/verde.js"></script>
+  <script src="./CODIGO/amarilla.js"></script>
+  <script src="./CODIGO/blanca.js"></script>
 
 </body>
 
