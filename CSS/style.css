@@ -3,7 +3,9 @@ body {
 }
   
   #my-canvas {
-    background-color: #FFF5EE;
+    background-color: transparent;
+    border: 5px solid black;
+
   }
   
   #start-btn, #restart-btn,#back-btn {

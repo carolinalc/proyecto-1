@@ -14,6 +14,7 @@ class Game {
         this.delete;
         this.score = 0;
         this.scoreVerde = 3;
+        
     }
 
    
@@ -159,7 +160,11 @@ if(this.bolita.x < eachRoja.x + eachRoja.w &&
 }
 
 
-
+ speedUp =()=> {
+    for(i=2; i>this.Amarilla.speed; i++)  {
+        this.Amarilla.speed = this.Amarilla.speed + 2;
+        }
+    }
 
 //CHOQUE CON LAS ESTRELLAS
 //amarilla
