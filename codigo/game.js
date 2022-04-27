@@ -115,12 +115,11 @@ console.log(this.score)
 
     this.bolita.gravityBolita()
     
-
-
     //play and repeat
     if (this.isGameOn){
         requestAnimationFrame(this.gameLoop)
         }
+
 
     //finiquito
     this.gameOverRoja()
@@ -160,11 +159,11 @@ if(this.bolita.x < eachRoja.x + eachRoja.w &&
 }
 
 
- speedUp =()=> {
-    for(i=2; i>this.Amarilla.speed; i++)  {
-        this.Amarilla.speed = this.Amarilla.speed + 2;
+ /*speedUp =()=> {
+    for(i=2; i>this.speed; i++)  {
+        this.speed = this.speed + 2;
         }
-    }
+    }*/
 
 //CHOQUE CON LAS ESTRELLAS
 //amarilla
@@ -182,7 +181,9 @@ choqueAmarilla = () => {
       
     this.delete = this.amarillaArr.indexOf(eachAmarilla)
     this.amarillaArr.splice(this.delete, 1)
-    this.score++}
+    this.score++
+    
+}  
 })
 }
 
@@ -205,6 +206,7 @@ choqueBlanca = () => {
         this.isGameOn = false;
         canvas.style.display = "none"
         gameOverScreen.style.display = "flex"
+        
     }
 })
 }
@@ -223,7 +225,9 @@ choqueRosa = () => {
       
     this.delete = this.rosaArr.indexOf(eachRosa)
     this.rosaArr.splice(this.delete, 1)
-    this.score = this.score + 3}
+    this.score = this.score + 3
+    
+    }
 })
 }
 
