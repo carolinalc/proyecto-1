@@ -164,7 +164,8 @@ if(this.bolita.x < eachRoja.x + eachRoja.w &&
         gameOverScreen.style.display = "flex"
         audio.pause()
         audioEnd.play()
-        audioEnd.loop = true;}
+        audioEnd.loop = true;
+        audioEnd.volume = 0.1}
         marcador.style.display ="none"
         document.getElementById("scorefinal").innerText = this.score;
 })

@@ -26,6 +26,7 @@ const startGame = () => {
 
     audio.play()
     audio.loop = true;
+    audio.volume = 0.1;
 
     audioInicio.pause()
 
@@ -80,6 +81,7 @@ let backToStart = () => {
 let clickstart = () => {
   audioInicio.play()
   audioInicio.loop = true;
+  audioInicio.volume = 0.1;
 }
 
 // * addEventListener
