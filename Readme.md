@@ -1,93 +1,88 @@
-PROYECTO 1 - SUSUWATARI -
-Los susuwataris son bolitas de hollin mágicas que comen estrellitas de colores. Tu bolita tiene que comerse las estrellas correctas, conseguir el maximo posible de puntos y vidas. 
+# PROYECTO 1 - SUSUWATARI -
+The susuwataris are magic little dust balls, they eat colorfull candy stars. You have to eat the correct colors to get maximun score, and avoid the stars that take away live.
 
-MVP (DOM - CANVAS)
-cinco estrellas que aparecen por la derecha.
-las estrellas aparecen de forma random desdde la derecha.
-la bolita de mueve con las flechas y salta con el espacio.
+# MVP (DOM - CANVAS)
+- Five stars appear randomly from the right.
+- The susuwatari moves with the arrows and jumps with the space.
+- The red stars end the game.
+- White, green, pink and yellow stars disappear with a collision.
+- Pink and yellow stars accumulate points.
+- White stars takes 1 point life.
+- Green stars gives 1 point life
+- You can add your name, and at the end screen you'll get your accumulated score.
+
+# Backlog
+- Ranking pole in local storage
+
+# Data Structure
+## main.js
+- startGame 
+- spacePress 
+- rightPress
+- leftPress
+- upPress
+- downPress
+- backToStart
+- clickstart 
+
+## game.js
+- Game => this.bolita, this.rojaArr, this.amarillaArr ,this.blancaArr, this.rosaArr, this.verdeArr, this.isGameOn, this.cambioPosicion
+- addRoja
+- addAmarilla
+- addBlanca
+- addRosa
+- addVerde
+- gameLoop
+- gameOverRoja
+- choqueAmarilla
+- choqueBlanca
+- choqueRosa
+- choqueVerde
+
+## amarilla.js
+- Amarilla => this.x, this.y, this.w, this.h, this.img, this.img.src, this.speed.
+- drawAmarilla
+- moveAmarilla
+
+## roja.js
+- Roja => this.x, this.y, this.w, this.h, this.img, this.img.src, this.speed.
+- drawRoja
+- moveRoja
+
+## blanca.js
+- Blanca => this.x, this.y, this.w, this.h, this.img, this.img.src, this.speed.
+- drawBlanca
+- moveBlanca
+
+## rosa.js
+- Rosa => this.x, this.y, this.w, this.h, this.img, this.img.src, this.speed.
+- drawRosa
+- moveRosa
+
+## verde.js
+- Verde => this.x, this.y, this.w, this.h, this.img, this.img.src, this.speed.
+- drawVerde
+- moveVerde
+
+## bolita.js
+- Bolita =>this.x, this.y, this.w, this.h, this.img, this.img.src, this.speed, this.jumpSpeed, 
+- drawBolita
+- gravityBolita
+- hitBottom
+- jumpBolita
+- moveRight
+- moveLeft
+- moveUp
+- moveDown
+
+# States y States Transitions
+- SplashScreen: Initial screen, with instructions first song to play, input to tape your name, scores boxes, presentation picture and start game button.  
+- GameScreen: Screen where the game displays in a canvas, points and lives scores boxes and instructions. This screen plays automaticaly a game audio. 
+- GameOverScreen: Final screen with a game over picture, button to restart, button to go back to initial screen, your final score above the picture and instructions. This screen plays automaticaly a game audio.
 
 
-
-four tentacles stacking will end the game
-cannonballs destroy tentacles
-reload time for shooting cannonballs
-Increasing dificulty
-
-Backlog
-add scoreboard
-Ability to start the game on increased dificulty lvl
-
-        Data Structure
-main.js
-buildSplashScreen () {}
-buildGameScreen () {}
-buildGameOverScreen () {}
-
-game.js
-Game () {}
-starLoop () {}
-checkCollisions () {}
-addTentacle () {}
-clearCanvas () {}
-updateCanvas () {}
-drawCanvas () {}
-GameOver () {}
-
-ship.js
-Ship () { this.x; this.y; this.direction; this.size }
-draw () {}
-move () {}
-shoot () {}
-checkScreenCollision () {}
-
-tentacle.js
-Tentacle () { this.x; this.y; this.direction; this.size }
-draw () {}
-move () {}
-checkCollisionBotton () {}
-
-cannonball.js
-Cannonball () { this.x; this.y; this.direction; this.size }
-draw () {}
-move () {}
-checkCollisionTop () {}
-
-        States y States Transitions
-Definition of the different states and their transition (transition functions)
-
-splashScreen
-gameScreen
-gameOverScreen
-
-Task
-main - buildDom
-main - buildSplashScreen
-main - addEventListener
-main - buildGameScreen
-main - buildGameOverScreen
-game - startLoop
-game - buildCanvas
-game - updateCanvas
-game - drawCanvas
-tentacle - draw
-tentacle - move
-game - addTentacle
-ship - draw
-ship - move
-ship - shoot
-game - addShip
-cannonball - draw
-cannonball - move
-game - checkCollision
-game - GameOver
-game - addEventListener
-
-Links
-Trello
-Link url
-
-Git
-URls for the project repo and deploy Link Repo Link Deploy
-
-Slides
-URls for the project presentation (slides) Link Slides.com
+# LINKS
+## Git
+https://carolinalc.github.io/proyecto-1/
+## Slides
+URls for the project presentation (slides) Link Slides.com  
