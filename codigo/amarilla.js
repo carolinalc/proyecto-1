@@ -11,15 +11,16 @@ class Amarilla {
 
     }
 
+    //dibujar
     drawAmarilla = () => {
         ctx.drawImage(this.img, this.x, this.y, this.w, this.h)
     }
 
-
+    //movimiento
     moveAmarilla = () => {
         this.x = this.x - this.speed;
     }
 
     
     
-}
+}//fin clase

@@ -17,7 +17,9 @@
         STARS: the green ones add life, the white ones subtract life, the yellow ones add 1 point and the pink ones 3 points.<br>
         The red ones make you sick and you lose.<br>WARNING. When you get 10 and 20 points, the yellow and pink stars will increase your speed. </h4>
     </div>
-    <div id="marcador">  <input type="string" id="name" placeholder="   YOUR NAME HERE"> </div>
+    <div id="marcador">  <input type="string" id="name" placeholder="   YOUR NAME HERE"> 
+    <button id="musicBtn" onclick="clickstart()">🎵</button>
+  </div>
   </div>
 
   <div class="container">
@@ -32,7 +34,7 @@
     <!-- CANVAS DEL JUEGO -->
     <canvas id="my-canvas" width="1200" height="600"></canvas>
     
-    <!-- OVER -->
+    <!--GAME OVER -->
     <div id="gameover-screen" class="container">
       <div id="nameover"><h2><span id="nombrepersona"></span>  <span id="scorefinal"> </span></h2></div> 
       <img src="./Imagenes/chihiro006.jpg" width="600" alt="logo" />

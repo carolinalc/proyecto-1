@@ -11,13 +11,14 @@ class Verde {
 
     }
 
+    //dibujar
     drawVerde = () => {
         ctx.drawImage(this.img, this.x, this.y, this.w, this.h)
     }
 
-
+    //movimiento
     moveVerde = () => {
         this.x = this.x - this.speed;
     }
 
-}
+}//fin clase

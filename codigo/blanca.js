@@ -11,13 +11,14 @@ class Blanca {
 
     }
 
+    //dibujar
     drawBlanca = () => {
         ctx.drawImage(this.img, this.x, this.y, this.w, this.h)
     }
 
-
+    //movimiento
     moveBlanca = () => {
         this.x = this.x - this.speed;
     }
 
-}
+}//fin clase

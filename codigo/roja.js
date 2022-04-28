@@ -13,14 +13,14 @@ class Roja {
 
     }
         
-    
+    //dibujar
     drawRoja= () => {
         ctx.drawImage(this.img, this.x, this.y, this.w, this.h)     
     }
 
-
+    //movimiento
     moveRoja = () => {
         this.x = this.x - this.speed;
          }
 
-}
+}//fin clase

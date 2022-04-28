@@ -37,7 +37,6 @@ class Game {
            })
     }
         
-    
     addBlanca = () => { 
     if(this.blancaArr[this.blancaArr.length - 1].x < 1000){
         this.cambioPosicion = Math.random() *  580;
@@ -64,7 +63,7 @@ class Game {
         this.verdeArr.push(this.newComida)}}
 
 
-
+//GAMELOOP
 gameLoop = () => {
 console.log(this.score)
 
@@ -148,7 +147,8 @@ console.log(this.score)
 
       document.getElementById("laSuma").innerHTML = this.score;
       document.getElementById("laVida").innerHTML = this.scoreVerde;
-    }
+      
+    }//fin GameLoop
 
 
 // choque con la roja
@@ -173,7 +173,6 @@ if(this.bolita.x < eachRoja.x + eachRoja.w &&
 
  
 //CHOQUE CON LAS ESTRELLAS
-//amarilla
 choqueAmarilla = () => {
 
     this.amarillaArr.forEach((eachAmarilla, index) => {
@@ -192,6 +191,7 @@ choqueAmarilla = () => {
 }  
 })
 }
+
 
 choqueBlanca = () => {
 
@@ -216,6 +216,7 @@ choqueBlanca = () => {
     }
 })
 }
+
 
 choqueRosa = () => {
 
